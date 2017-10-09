@@ -1,0 +1,18 @@
+---
+interfaces:
+  vmx0:
+    name: wan
+    dhcp_client: yes
+    dhcp_server: no
+    wireless: no
+
+  vmx1:
+    name: lan
+    dhcp_client: no
+    dhcp_server: yes
+    wireless: no
+    ip: 192.168.1.1
+    netmask: 255.255.255.0
+    subnet: 192.168.1.0
+    dhcp_range_begin: 192.168.1.100
+    dhcp_range_end: 192.168.1.199
