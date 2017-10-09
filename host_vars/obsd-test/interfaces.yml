@@ -4,13 +4,11 @@ interfaces:
     name: wan
     dhcp_client: yes
     dhcp_server: no
-    wireless: no
 
   vmx1:
     name: lan
     dhcp_client: no
     dhcp_server: yes
-    wireless: no
     ip: 192.168.1.1
     netmask: 255.255.255.0
     subnet: 192.168.1.0
