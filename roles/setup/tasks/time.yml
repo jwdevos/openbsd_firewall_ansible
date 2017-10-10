@@ -4,8 +4,6 @@
     dest: "/etc/localtime"
     state: link
     force: yes
-  register: tz_changed
   
-- name: kick ntpd if needed
+- name: kick ntpd
   command: ntpd -s
-  when: tz_changed.changed
