@@ -1,6 +1,6 @@
 ---
 # bootstrap vars
-py_ver: 2.7.13p0
+python_package: python-2.7.13p0.tgz
 installurl: https://fastly.cdn.openbsd.org/pub/OpenBSD
 commands:
   - command: ln -sf /usr/local/bin/python2.7 /usr/local/bin/python
