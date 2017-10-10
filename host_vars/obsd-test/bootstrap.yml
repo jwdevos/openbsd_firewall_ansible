@@ -1,7 +1,7 @@
 ---
 # bootstrap vars
 python_package: python-2.7.14
-installurl: https://fastly.cdn.openbsd.org/pub/OpenBSD
+installurl: 	https://mirror.leaseweb.com/pub/OpenBSD
 commands:
   - ln -sf /usr/local/bin/python2.7 /usr/local/bin/python
   - ln -sf /usr/local/bin/python2.7-2to3 /usr/local/bin/2to3
