@@ -18,4 +18,4 @@
   lineinfile: 
     dest: /etc/rc.conf.local
     regexp: "^dhcpd_flags="
-    line: "dhcpd_flags="em1"
+    line: "dhcpd_flags="em1""
