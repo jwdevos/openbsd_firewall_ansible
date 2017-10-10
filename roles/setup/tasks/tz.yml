@@ -1,6 +1,6 @@
 - name: configure /etc/localtime
   file:
-    src: {{ tz }}
+    src: "{{ tz }}"
     dest: "/etc/localtime"
     state: link
     force: yes
