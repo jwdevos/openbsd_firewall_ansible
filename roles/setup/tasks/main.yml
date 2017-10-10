@@ -4,3 +4,6 @@
 
 - name: include dhcpd
   include: dhcpd.yml
+  
+- name: include hostname
+  include: hostname.yml
