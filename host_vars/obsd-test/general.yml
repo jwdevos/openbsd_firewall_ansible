@@ -1,5 +1,6 @@
 ---
 py_ver: 2.7.13p0
+installurl: https://fastly.cdn.openbsd.org/pub/OpenBSD
 ansible_host: 10.13.10.110
 ansible_connection: paramiko
 ansible_user: root
