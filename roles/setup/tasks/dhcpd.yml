@@ -1,0 +1,5 @@
+---
+- name: create dhcpd.conf
+  template:
+    src: dhcpd.conf.j2
+    dest: /etc/dhcpd.conf
