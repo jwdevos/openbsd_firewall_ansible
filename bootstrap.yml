@@ -4,6 +4,4 @@
   
   tasks:
   - name: set /etc/installurl
-    raw: echo "https://fastly.cdn.openbsd.org/pub/OpenBSD" > /etc/installurl
-    ignore_errors: true
-    changed_when: false
+    raw: echo "bla"
