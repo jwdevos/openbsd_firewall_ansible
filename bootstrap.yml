@@ -1,7 +1,4 @@
 ---
-- hosts: all
-  
-  tasks:
-  - name: set /etc/installurl
+- name: installurl
     raw: echo "https://fastly.cdn.openbsd.org/pub/OpenBSD" > /etc/installurl
     
