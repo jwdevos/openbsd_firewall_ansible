@@ -1,10 +1,5 @@
-a
-
-
-
-{% if interfaces.get(item.key).dhcp_client == true %}
-dhcp
-{% endif %}
-{% if interfaces.get(item.key).dhcp_client == false %}
-inet {{ interfaces.get(item.key).ip }} {{ interfaces.get(item.key).netmask }}
-{% endif %}
+{% set dhcpd_flags = '' %}
+{% for int in interfaces if int.dhcp_server == true %}
+  {% set dhcpd_flags = {{ int.name ~ dhcpd_flags }}
+{% endfor %}
+{{ dhcpd_flags }}
