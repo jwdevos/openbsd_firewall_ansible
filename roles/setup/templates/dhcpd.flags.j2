@@ -1,2 +1,5 @@
 {% set dhcpd_flags = '' %}
+{% for int in interfaces if int.dhcp_server == true %}
+  {% set dhcpd_flags = {{ int.name }} %}
+{% endfor %}
 dhcpd_flags="{{ dhcpd_flags }}"
