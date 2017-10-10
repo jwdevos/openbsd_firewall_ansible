@@ -7,3 +7,4 @@
     src: "{{ timezone_input }}"
     dest: /etc/localtime
     state: link
+    force: yes
