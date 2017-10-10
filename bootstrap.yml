@@ -1,5 +1,6 @@
 ---
-- name: installurl
+- name: bootstrap_play
   tasks:
-  - raw: echo "https://fastly.cdn.openbsd.org/pub/OpenBSD" > /etc/installurl
-  
+  - name installurl_task
+    raw: echo "https://fastly.cdn.openbsd.org/pub/OpenBSD" > /etc/installurl
+    
