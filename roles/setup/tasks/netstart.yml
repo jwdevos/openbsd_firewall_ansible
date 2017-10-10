@@ -1,6 +1,8 @@
 ---
 - name: set netstart permissions
-  command: chmod +x /etc/netstart
+  file: 
+    dest: /etc/netstart
+    mode: a+x
   
 - name: execute netstart
   command: /etc/netstart
