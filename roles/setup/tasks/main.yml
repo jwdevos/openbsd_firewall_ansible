@@ -6,3 +6,4 @@
   - interfaces.yml
   - dhcpd.yml
   - netstart.yml
+  - rc.yml
