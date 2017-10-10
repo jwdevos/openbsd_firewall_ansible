@@ -7,4 +7,4 @@ ansible_python_interpreter: /usr/local/bin/python2.7
 includes:
   hostname: hostname.yml
   interfaces: interfaces.yml
-  interfaces: dhcpd.yml
+  dhcpd: dhcpd.yml
