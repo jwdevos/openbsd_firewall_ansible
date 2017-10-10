@@ -10,5 +10,5 @@
     raw: pkg_add {{ python_package }}
     
   - name: set python symlinks
-    raw: "{{ item.command }}"
-    with_dict: "{{ commands }}"
+    raw: "{{ item }}"
+    with_items: "{{ commands }}"
