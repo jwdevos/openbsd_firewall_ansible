@@ -4,7 +4,7 @@
 
 - name: configure /etc/localtime
   file: 
-    src: "{{ timezone_input }}"
+    src: "/usr/share/zoneinfo/Europe/Amsterdam"
     dest: "/etc/localtime"
     state: link
     force: yes
