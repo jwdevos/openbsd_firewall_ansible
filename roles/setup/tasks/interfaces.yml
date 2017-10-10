@@ -4,3 +4,4 @@
     src: interfaces.j2
     dest: /etc/hostname.{{ item.key }}
   with_dict: "{{ interfaces }}"
+  register: interfaces_changed
