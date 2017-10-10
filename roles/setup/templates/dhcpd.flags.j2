@@ -1,1 +1,1 @@
-dhcpd_flags="{% for int in interfaces%}{% if interfaces.get(int).dhcp_server == true %}{{ int }} {% endif %}{% endfor %}"
+dhcpd_flags="{% for int in interfaces%}{{ int }} {% endfor %}"
