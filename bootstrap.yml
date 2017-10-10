@@ -4,4 +4,4 @@
   
   tasks:
   - name: set /etc/installurl
-    raw: echo "bla"
+    raw: uname -a
