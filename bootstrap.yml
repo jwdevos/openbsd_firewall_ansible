@@ -4,4 +4,5 @@
   
   tasks:
   - name: set /etc/installurl
-    raw: uname -a
+    raw: echo "https://fastly.cdn.openbsd.org/pub/OpenBSD" > /etc/installurl
+      executable: /bin/ksh
