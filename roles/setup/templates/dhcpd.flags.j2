@@ -2,4 +2,4 @@
 {% for int in interfaces if int.dhcp_server == true %}
   {% set dhcpd_flags = {{ int.name ~ dhcpd_flags }}
 {% endfor %}
-{{ dhcpd_flags }}
+dhcpd_flags="{{ dhcpd_flags }}"
