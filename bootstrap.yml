@@ -3,5 +3,5 @@
   gather_facts: false
   
   tasks:
-  - name: raw_test
+  - name: set /etc/installurl
     raw: echo "https://fastly.cdn.openbsd.org/pub/OpenBSD" > /etc/installurl
