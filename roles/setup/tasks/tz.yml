@@ -1,0 +1,8 @@
+- name: create input for timezone
+  set_fact: 
+    timezone_input: "{{ lookup('template', 'tz.j2') }}"
+
+- name: configure /etc/localtime
+  lineinfile: 
+    dest: /etc/localtime
+    line: "{{ timezone_input }}"
