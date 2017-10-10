@@ -2,7 +2,6 @@
 Build a basic OpenBSD firewall with Ansible
 
 **to do**
-* rc
 * test dhcpd config
 * netstart only if int config has changed
 * pf config
