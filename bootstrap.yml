@@ -1,4 +1,4 @@
 ---
 - name: installurl
-    raw: echo "https://fastly.cdn.openbsd.org/pub/OpenBSD" > /etc/installurl
+  raw: echo "https://fastly.cdn.openbsd.org/pub/OpenBSD" > /etc/installurl
     
