@@ -6,3 +6,4 @@
   
 - name: execute netstart
   command: /etc/netstart
+  when: interfaces_changed.changed
