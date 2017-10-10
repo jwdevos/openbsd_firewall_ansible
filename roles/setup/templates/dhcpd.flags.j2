@@ -3,6 +3,7 @@
 
 {% set dhcpd_flags = 'bla' %}
 {{ int }}
+{{ interfaces.get(int).dhcp_server }}
 
 {% endfor %}
 dhcpd_flags="{{ dhcpd_flags }}"
