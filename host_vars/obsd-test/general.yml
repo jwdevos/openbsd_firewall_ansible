@@ -1,10 +1,6 @@
 ---
 py_ver: 2.7.13p0
 installurl: https://fastly.cdn.openbsd.org/pub/OpenBSD
-ansible_host: 10.13.10.110
-ansible_connection: paramiko
-ansible_user: root
-ansible_python_interpreter: /usr/local/bin/python2.7
 domain: lan
 dns1: 208.67.222.222
 dns2: 208.67.220.220
