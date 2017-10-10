@@ -2,5 +2,5 @@
 - name: create interface configuration files
   template:
     src: interfaces.j2
-    dest: /etc/hostname.{{ item.key }}
+    dest: /etc/hostname.{{ int.key }}
   with_dict: "{{ interfaces }}"
