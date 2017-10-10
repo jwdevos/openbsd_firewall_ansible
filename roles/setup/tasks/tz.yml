@@ -4,6 +4,6 @@
 
 - name: configure /etc/localtime
   file: 
-    src: /etc/localtime
+    src: "/etc/localtime"
     dest: "{{ timezone_input }}"
     state: link
