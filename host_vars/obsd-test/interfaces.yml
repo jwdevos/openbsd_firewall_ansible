@@ -1,4 +1,5 @@
 ---
+# interface vars
 interfaces:
   vmx0:
     name: wan
