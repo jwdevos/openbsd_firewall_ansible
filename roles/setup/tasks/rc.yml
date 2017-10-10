@@ -17,10 +17,6 @@
 - name: create input for dhcpd flags
   set_fact: 
     dhcpd_flags_input: "{{ lookup('template', 'dhcpd.flags.j2') }}"
-    
-- name: debug dhcpd_flags_input
-  debug:
-    var: dhcpd_flags_input
 
 - name: configure rc.conf.local dhcpd flags
   lineinfile: 
