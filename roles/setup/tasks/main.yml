@@ -1,4 +1,8 @@
 ---  
 - name: include tasks
   include: "{{ item }}"
-  with_items: "{{ includes }}"
+  with_items:
+  - hostname.yml
+  - interfaces.yml
+  - dhcpd.yml
+  - netstart.yml
