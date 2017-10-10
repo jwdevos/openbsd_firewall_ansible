@@ -14,7 +14,11 @@
     regexp: "^vmd_flags="
     line: "vmd_flags="
 
-- name: 
+- name: create input for dhcpd flags
+  set_fact: 
+    dhcpd_flags_input: "{{ lookup('template', 'dhcpd.flags.j2') }}"
+
+- name: configure rc.conf.local dhcpd flags
   lineinfile: 
     dest: /etc/rc.conf.local
     regexp: "^dhcpd_flags="
