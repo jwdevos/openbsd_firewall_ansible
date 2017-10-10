@@ -1,0 +1,6 @@
+---
+- name: include interfaces
+  include: interfaces.yml
+
+- name: include dhcpd
+  include: dhcpd.yml
