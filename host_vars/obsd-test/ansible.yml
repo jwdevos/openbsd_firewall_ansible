@@ -4,7 +4,3 @@ ansible_host: 10.13.10.115
 ansible_connection: paramiko
 ansible_user: root
 ansible_python_interpreter: /usr/local/bin/python2.7
-includes:
-  - hostname.yml
-  - interfaces.yml
-  - dhcpd.yml
