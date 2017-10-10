@@ -1,9 +1,7 @@
 ---
 - hosts: all
-  gather_facts: true
   
   tasks:
   - name: set /etc/installurl
     raw: echo "https://fastly.cdn.openbsd.org/pub/OpenBSD" > /etc/installurl
-    args:
-      executable: /bin/ksh
+    
