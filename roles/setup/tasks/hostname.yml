@@ -1,0 +1,3 @@
+---
+- name: set hostname
+  command: echo "{{ hostname }}.{{ domain }" > /etc/myname
