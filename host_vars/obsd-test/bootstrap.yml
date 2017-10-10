@@ -1,0 +1,4 @@
+---
+# bootstrap vars
+py_ver: 2.7.13p0
+installurl: https://fastly.cdn.openbsd.org/pub/OpenBSD
