@@ -5,3 +5,7 @@
     state: link
     force: yes
   register: tz_changed
+  
+- name: kick ntpd if needed
+  command: ntpd -s
+  when: tz_changed.changed
