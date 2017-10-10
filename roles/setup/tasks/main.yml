@@ -1,9 +1,7 @@
----
-- name: include interfaces
-  include: interfaces.yml
-
-- name: include dhcpd
-  include: dhcpd.yml
-  
-- name: include hostname
-  include: hostname.yml
+---  
+- name: include tasks
+  include: {{ item }}
+  with_items:
+    - interfaces.yml
+    - dhcpd.yml
+    - hostname.yml
