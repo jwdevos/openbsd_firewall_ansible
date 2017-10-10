@@ -1,6 +1,6 @@
 {% set dhcpd_flags = '' %}
 {% for int in interfaces %}
   {% set dhcpd_flags = 'bla' %}
-  {{ int.name }}
+  {{ int }}
 {% endfor %}
 dhcpd_flags="{{ dhcpd_flags }}"
