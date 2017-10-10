@@ -7,6 +7,7 @@ Build a basic OpenBSD firewall with Ansible
 * pf config
 * test pf config
 * start services if shit is good
+* ntp
 * test
 * reboot
 * test again
