@@ -5,3 +5,6 @@
   tasks:
   - name: set /etc/installurl
     raw: echo "https://fastly.cdn.openbsd.org/pub/OpenBSD" > /etc/installurl
+    
+  - name: install python
+    raw: pkg_add python-{{ py_ver }}
