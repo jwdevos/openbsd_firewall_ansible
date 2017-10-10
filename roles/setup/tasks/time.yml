@@ -4,3 +4,4 @@
     dest: "/etc/localtime"
     state: link
     force: yes
+  register: tz_changed
