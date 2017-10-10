@@ -3,6 +3,7 @@
   include: "{{ item }}"
   with_items:
   - hostname.yml
+  - tz.yml
   - interfaces.yml
   - dhcpd.yml
   - netstart.yml
