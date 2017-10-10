@@ -1,9 +1,10 @@
 {% set dhcpd_flags = '' %}
-{% for int in interfaces %}
-
+{% for int in interfaces%}
+{% if interfaces.get(int).dhcp_server == true %}
 {% set dhcpd_flags = 'bla' %}
 {{ int }}
 {{ interfaces.get(int).dhcp_server }}
+{% endif %}
 
 {% endfor %}
 dhcpd_flags="{{ dhcpd_flags }}"
