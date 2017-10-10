@@ -1,19 +1,21 @@
 ---
 - name: see if rc.conf.local exists
-    stat:
-      path: /etc/rc.conf.local
-    register: rc_conf_local
+  stat:
+    path: /etc/rc.conf.local
+  register: rc_conf_local
 
 - name: create rc.conf.local if necessary
-    command: cp /etc/rc.conf /etc/rc.conf.local
-    when: rc_conf_local.stat.exists == False
+  command: cp /etc/rc.conf /etc/rc.conf.local
+  when: rc_conf_local.stat.exists == False
 
-- name: configure rc.conf.local flags
-    lineinfile:
-      dest: /etc/rc.conf.local
-      regexp: "^vmd_flags="
-      line: "vmd_flags="
-    lineinfile: 
+- name: configure rc.conf.local vmd flag
+  lineinfile:
     dest: /etc/rc.conf.local
-      regexp: "^dhcpd_flags="
-      line: "dhcpd_flags="em1"
+    regexp: "^vmd_flags="
+    line: "vmd_flags="
+
+- name: 
+  lineinfile: 
+    dest: /etc/rc.conf.local
+    regexp: "^dhcpd_flags="
+    line: "dhcpd_flags="em1"
