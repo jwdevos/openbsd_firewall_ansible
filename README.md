@@ -3,7 +3,7 @@ Build a basic OpenBSD firewall with Ansible
 
 **to do**
 * set hostname
-* pf files
+* pf config
 * testing of dhcpd and pf files
 * netstart at the right time
 
