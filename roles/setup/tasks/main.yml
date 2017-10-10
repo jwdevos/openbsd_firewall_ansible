@@ -1,4 +1,4 @@
 ---  
 - name: include tasks
-  include: "{{ item.key.value }}"
-  with_dict: "{{ includes }}"
+  include: "{{ item }}"
+  with_items: "{{ includes }}"
