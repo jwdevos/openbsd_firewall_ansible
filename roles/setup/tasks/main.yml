@@ -2,6 +2,6 @@
 - name: include tasks
   include: {{ item }}
   with_items:
-    - interfaces.yml
-    - dhcpd.yml
-    - hostname.yml
+    - "interfaces.yml"
+    - "dhcpd.yml"
+    - "hostname.yml"
