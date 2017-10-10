@@ -1,11 +1,4 @@
 ---
-- name: include interfaces
-  include: interfaces.yml
-
-- name: include dhcpd
-  include: dhcpd.yml
-# cat interfaces.yml
----
 - name: create interface configuration files
   template:
     src: interfaces.j2
