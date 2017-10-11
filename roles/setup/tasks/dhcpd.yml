@@ -3,7 +3,6 @@
   template:
     src: dhcpd.conf.j2
     dest: /etc/dhcpd.conf
-    validate: dhcpd -n %s
 
 - name: start dhcpd if needed
   service:
