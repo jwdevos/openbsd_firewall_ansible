@@ -2,7 +2,9 @@
 
 
 {% for int in interfaces if interfaces.get(int).fw == "internal" %}
+{% if not loop.last %}
 {{ int }}, 
+{% endif %}
 {% if loop.last %}
 {{ int }}
 {% endif %}
