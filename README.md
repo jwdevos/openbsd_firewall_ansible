@@ -1,5 +1,5 @@
 # openbsd_firewall_ansible  
-This Ansible project is used to deploy and manage an OpenBSD firewall running pf and dhcpd. The playbooks deploy a running firewall taking nothing more than a fresh install of OpenBSD. The project produces a minimum viable product to demonstrate a working firewall. It is intended for demonstration purposes but can be taken freely to suit your own needs. The cool thing is that all of the unique configuration is in the files under host_vars. That means you can easily make configuration changes to a running box and reload only the services that were affected. For pf, the firewall keeps running if you just reload the configuration.
+This Ansible project is used to deploy and manage an OpenBSD firewall running pf and dhcpd. The playbooks deploy a running firewall taking nothing more than a fresh install of OpenBSD. The playbooks produce a minimum viable product to demonstrate a working firewall. They are intended for demonstration purposes but can be taken freely to suit your own needs. The cool thing is that all of the unique configuration is in the variables under host_vars. That means you can easily make configuration changes to a running box and reload only the services that were affected. For pf, the firewall keeps running if you just reload the configuration.
 
 **How to use**  
 Start with a fresh install of OpenBSD reachable via SSH as root on an IPv4 address. Have this Ansible project ready on another host that can reach the OpenBSD box.
@@ -16,6 +16,7 @@ ansible-playbook play_setup.yml -i inventory --ask-pass
 bla
 
 **Some notes**  
+* Additional firewall rules have to be added in the template file at this moment. The intention is to look into generating the rules, taking the content from host_vars
 * For 9 out of 10 use cases there is only going to be one external interface. This project was coded for that use case only. Adding more than one interface variable set to external might harm the playbook execution or the functionality of the running firewall
 pf template breaks with multiple interfaces as external
 * The code was tested on OpenBSD 6.2
