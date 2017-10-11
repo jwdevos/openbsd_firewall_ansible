@@ -2,11 +2,16 @@
 Build a basic OpenBSD firewall with Ansible
 
 **to do**
+* test dhcpd config
+* stop and start dhcpd if needed
+* 
 * test pf config
-* (re)start services if shit is good _and_ changed
-* test
+* start pf if needed and config is good
+* reload pf config if needed and config is good
+
+* test firewall
 * reboot
-* test again
+* test firewall again
 * 
 * check for state in playbooks, should only be allowed in vars
 
