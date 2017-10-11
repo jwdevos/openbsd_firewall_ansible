@@ -2,10 +2,6 @@
 Build a basic OpenBSD firewall with Ansible
 
 **to do**
-* test firewall
-* reboot
-* test firewall again
-* 
 * check for state in playbooks, should only be allowed in vars
 
 **project explanation**
