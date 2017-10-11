@@ -2,10 +2,10 @@
 - name: include tasks
   include: "{{ item }}"
   with_items:
-  - hostname.yml
-  - interfaces.yml
-  - dhcpd.yml
-  - netstart.yml
-  - time.yml
-  - rc.yml
+  #- hostname.yml
+  #- interfaces.yml
+  #- dhcpd.yml
+  #- netstart.yml
+  #- time.yml
+  #- rc.yml
   - pf.yml
