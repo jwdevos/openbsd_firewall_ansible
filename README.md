@@ -11,7 +11,7 @@ Just run the two following playbooks from the main project directory (./openbsd_
 ansible-playbook bootstrap.yml -i inventory --ask-pass
 ansible-playbook play_setup.yml -i inventory --ask-pass
 ```
-You can use the play_setup.yml playbook for making changes after the initial deployment too.
+The play_setup.yml playbook can also be used for making changes after the initial deployment. The intention is to do all of the management of the firewall with the playbooks.
 
 **What's happening?**  
 bla
