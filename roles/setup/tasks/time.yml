@@ -6,6 +6,21 @@
     force: yes
   register: tz_changed
   
-- name: kick ntpd
+- name: see if this is first playbook run
+  stat:
+    path: /root/ansible_first_run
+  register: first_run
+
+- name: register first_run for playbook
+  file:
+    dest: /root/ansible_first_run
+    state: touch
+  when: first_run.stat.exists == False
+  
+- name: kick ntpd if this is first playbook run
+  command: ntpd -s
+  when: first_run.stat.exists == True
+  
+- name: kick ntpd if tz was changed
   command: ntpd -s
   when: tz_changed.changed
