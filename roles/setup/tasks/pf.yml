@@ -3,6 +3,7 @@
   template:
     src: pf.conf.j2
     dest: /etc/pf.conf
+    validate: pfctl -n -f %s
   register: pf
   
 - name: load config to pf if needed
