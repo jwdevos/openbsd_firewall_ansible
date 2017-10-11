@@ -7,7 +7,7 @@ Build a basic OpenBSD firewall with Ansible
 * test
 * reboot
 * test again
-* only run ntpd -s if needed
+* 
 * check for state in playbooks, should only be allowed in vars
 
 **project explanation**
