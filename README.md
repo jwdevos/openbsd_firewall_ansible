@@ -15,13 +15,17 @@ The play_setup.yml playbook can also be used for making changes after the initia
 
 **What's happening?**  
 OpenBSD doesn't have Python by default. The bootstrap playbook makes sure that package managent is configured on the host and that Python is available, installing it if necessary.  
-The setup playbook actually calls an ansible role taking care of lots of things.  
+The setup playbook actually calls an ansible role taking care of lots of things. It takes the content of the host_vars and makes sure following things get done:
+1. Set the system hostname to the correct value if necessary
+2. Make sure interface configuration files are set to the correct state
+3. Configure the rc.conf.local file for dhcpd and virtual tools if necessary
+4. Restart netwoking if relevant configuration was changed
+5. Configure dhcpd and make sure the service is started
+6. Configure time
+7. Configure IP forwarding
+8. Configure the pf firewall, testing the configuration file and reloading the firewall if relevant configuration was changed
 
-
-
-
-
-
+Most of the it
 
 **Some notes**  
 * Additional firewall rules have to be added in the template file at this moment. The intention is to look into generating the rules, taking the content from host_vars
