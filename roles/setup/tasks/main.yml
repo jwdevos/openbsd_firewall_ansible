@@ -7,6 +7,6 @@
   #- dhcpd.yml
   #- netstart.yml
   #- time.yml
-  #- rc.yml
+  - rc.yml
   - sysctl.yml
   - pf.yml
