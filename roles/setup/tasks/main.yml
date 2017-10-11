@@ -8,4 +8,5 @@
   #- netstart.yml
   #- time.yml
   #- rc.yml
+  - sysctl.yml
   - pf.yml
