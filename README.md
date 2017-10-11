@@ -14,7 +14,14 @@ ansible-playbook play_setup.yml -i inventory --ask-pass
 The play_setup.yml playbook can also be used for making changes after the initial deployment. The intention is to do all of the management of the firewall with the playbooks.
 
 **What's happening?**  
-bla
+OpenBSD doesn't have Python by default. The bootstrap playbook makes sure that package managent is configured on the host and that Python is available, installing it if necessary.  
+The setup playbook actually calls an ansible role taking care of lots of things.  
+
+
+
+
+
+
 
 **Some notes**  
 * Additional firewall rules have to be added in the template file at this moment. The intention is to look into generating the rules, taking the content from host_vars
