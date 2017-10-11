@@ -15,8 +15,7 @@ ext_subnets = "{ {% for int in interfaces %}
 {% endfor %} }"
 
 # define a table with forbidden external subnets
-table <forbidden> {
-{% for net in forbidden_nets %}{{ net }}, {% endfor %}
+table <forbidden> { {% for net in forbidden_nets %}{{ net }}, {% endfor %}
 }
 
 
