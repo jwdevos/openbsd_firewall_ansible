@@ -16,6 +16,7 @@
     dest: /etc/rc.conf.local
     regexp: "^vmd_flags="
     line: "vmd_flags="
+  when: virtual == True
 
 - name: create input for dhcpd flags
   set_fact: 
