@@ -3,11 +3,13 @@
 interfaces:
   vmx0:
     name: wan
+    fw: external
     dhcp_client: yes
     dhcp_server: no
 
   vmx1:
     name: lan
+    fw: internal
     dhcp_client: no
     dhcp_server: yes
     ip: 192.168.1.1
