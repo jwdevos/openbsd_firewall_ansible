@@ -1,4 +1,4 @@
-# openbsd_firewall_ansible
+# openbsd_firewall_ansible  
 Build a basic OpenBSD firewall with Ansible
 
 fully bla config via vars geen state in playbooks en templates
@@ -14,10 +14,10 @@ ansible-playbook bootstrap.yml -i inventory --ask-pass
 ansible-playbook play_setup.yml -i inventory --ask-pass
 ```
 
-**What's happening?**
+**What's happening?**  
 bla
 
-**Some notes**
+**Some notes**  
 * For 9 out of 10 use cases there is only going to be one external interface. This project was coded for that use case only. Adding more than one interface variable set to external might harm the playbook execution or the functionality of the running firewall
 pf template breaks with multiple interfaces as external
 * The code was tested on OpenBSD 6.2
