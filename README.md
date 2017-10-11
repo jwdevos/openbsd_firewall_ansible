@@ -11,6 +11,7 @@ Just run the two following playbooks from the main project directory (./openbsd_
 ansible-playbook bootstrap.yml -i inventory --ask-pass
 ansible-playbook play_setup.yml -i inventory --ask-pass
 ```
+You can use the play_setup.yml playbook for making changes after the initial deployment too.
 
 **What's happening?**  
 bla
