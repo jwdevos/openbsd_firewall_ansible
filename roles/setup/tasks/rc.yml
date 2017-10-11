@@ -5,7 +5,7 @@
   register: rc_conf_local
 
 - name: create rc.conf.local if necessary
-  file: 
+  copy: 
    src: /etc/rc.conf 
    dest: /etc/rc.conf.local
   when: rc_conf_local.stat.exists == False
