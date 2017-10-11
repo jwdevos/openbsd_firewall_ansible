@@ -7,12 +7,12 @@ internal_ints = "{ {% for int in interfaces %}
 internal_nets = "{ {% for int in interfaces %}
 {% if interfaces.get(int).fw == "internal" %}{{ int }}:network, {% endif %}
 {% endfor %} }"
-external_int = "{ {% for int in interfaces %}
+external_int = "{% for int in interfaces %}
 {% if interfaces.get(int).fw == "external" %}{{ int }}{% endif %}
-{% endfor %} }"
-external_net = "{ {% for int in interfaces %}
+{% endfor %}"
+external_net = "{% for int in interfaces %}
 {% if interfaces.get(int).fw == "external" %}{{ int }}:network{% endif %}
-{% endfor %} }"
+{% endfor %}"
 
 # don't send RST for dropped packets
 set block-policy drop
