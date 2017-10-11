@@ -1,6 +1,6 @@
 ---
 # ansible vars
-ansible_host: 10.13.10.117
+ansible_host: 10.0.0.100
 ansible_connection: paramiko
 ansible_user: root
 ansible_python_interpreter: /usr/local/bin/python2.7
