@@ -4,7 +4,7 @@ This Ansible project is used to deploy and manage an OpenBSD firewall running pf
 **How to use**  
 Start with a fresh install of OpenBSD reachable via SSH as root on an IPv4 address. Have this Ansible project ready on another host that can reach the OpenBSD box.
 
-This project should work with the defaults right away but you should set all your config by editing the host_vars.
+This project should work with the defaults right away but you should set all your config by editing the host_vars. You can set the IP address of the target host in the /host_vars/obsd-test/ansible.yml file.
 
 Just run the two following playbooks from the main project directory (./openbsd_firewall_ansible/):
 ```
