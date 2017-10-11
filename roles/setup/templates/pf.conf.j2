@@ -4,7 +4,7 @@
 internal_ints = "{ {% for int in interfaces %}
 {% if interfaces.get(int).fw == "internal" %}{{ int }}, {% endif %}
 {% if loop.last %}
-{% if interfaces.get(int).fw == "internal" %}{{ int }}{% endif %}
+{{ int }}
 {% endif %}
 {% endfor %} }"
 internal_nets = "{ {% for int in interfaces %}
