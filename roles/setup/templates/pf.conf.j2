@@ -7,7 +7,12 @@ int_if = "{ {% for int in interfaces %}
 int_subnets = "{ {% for int in interfaces %}
 {% if interfaces.get(int).fw == "internal" %}{{ int }}:network, {% endif %}
 {% endfor %} }"
-
+ext_if = "{ {% for int in interfaces %}
+{% if interfaces.get(int).fw == "external" %}{{ int }}, {% endif %}
+{% endfor %} }"
+ext_subnets = "{ {% for int in interfaces %}
+{% if interfaces.get(int).fw == "external" %}{{ int }}:network, {% endif %}
+{% endfor %} }"
 
 
 
