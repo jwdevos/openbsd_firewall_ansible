@@ -20,10 +20,6 @@ set block-policy drop
 #omit lo0 interface from being processed in pf
 set skip on lo0
 
-# scrub all incoming packets, clearing dnf bit, randomizing packet id
-# and setting max mss to 1440
-match in all scrub (no-df random-id max-mss 1440)
-
 # IPv4 NAT to outside rule
 match out on $external_int inet from $internal_nets nat-to ($external_int)
 
