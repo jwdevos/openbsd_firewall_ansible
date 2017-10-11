@@ -5,8 +5,9 @@
   register: sysctl_conf
   
 - name: /etc/sysctl.conf if necessary
-  command: touch /etc/sysctl.conf
-  when: sysctl_conf.stat.exists == False
+  file: 
+    dest: /etc/sysctl.conf
+    state: touch
   
 - name: enable temporary IPv4 forwarding if necessary
   command: sysctl net.inet.ip.forwarding=1
