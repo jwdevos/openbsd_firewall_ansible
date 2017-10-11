@@ -1,11 +1,11 @@
 # openbsd_firewall_ansible
 Build a basic OpenBSD firewall with Ansible
 
-**project explanation**
+**project explanation**  
 * pf template breaks with multiple interfaces as external
 * tested on OpenBSD 6.2
 * ssh allow rule niet in productie nemen
 
 
-**How to use**
+**How to use**  
 Start with a fresh install of OpenBSD reachable via SSH as root on an IPv4 address. Have this Ansible project ready on another host that can reach the OpenBSD box.
