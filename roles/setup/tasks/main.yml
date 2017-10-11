@@ -8,3 +8,4 @@
   - netstart.yml
   - time.yml
   - rc.yml
+  - pf.yml
