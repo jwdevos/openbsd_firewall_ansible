@@ -8,4 +8,8 @@ Build a basic OpenBSD firewall with Ansible
 
 
 **How to use**  
-Start with a fresh install of OpenBSD reachable via SSH as root on an IPv4 address. Have this Ansible project ready on another host that can reach the OpenBSD box.
+Start with a fresh install of OpenBSD reachable via SSH as root on an IPv4 address. Have this Ansible project ready on another host that can reach the OpenBSD box. Just run the two following playbooks from the main project directory (./openbsd_firewall_ansible/):
+'''
+ansible-playbook bootstrap.yml -i inventory --ask-pass
+ansible-playbook play_setup.yml -i inventory --ask-pass
+'''
