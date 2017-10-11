@@ -31,13 +31,10 @@ match out on $external_int inet from $internal_nets nat-to ($external_int)
 block all
 
 #allow incoming ping on external_int
-pass in on $external_int inet proto icmp icmp-type echoreq
+pass quick in on $external_int inet proto icmp icmp-type echoreq
 
 # allow ssh to external_int from any ip
 pass in on $external_int inet proto tcp from any to ($external_int) port 22
 
 # allow outgoing traffic
 pass from { self, $internal_nets }
-
-# allow ssh to external_int from any ip
-pass in on $external_int inet proto tcp from any to ($external_int) port 22
