@@ -5,8 +5,8 @@
   - hostname.yml
   - interfaces.yml
   - rc.yml
-  - dhcpd.yml
   - netstart.yml
+  - dhcpd.yml
   - time.yml
   - sysctl.yml
   - pf.yml
