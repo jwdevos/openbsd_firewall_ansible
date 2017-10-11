@@ -1,0 +1,25 @@
+---
+- name: see if /etc/sysctl.conf exists
+  stat:
+    path: /etc/sysctl.conf
+  register: sysctl_conf
+  
+- name: /etc/sysctl.conf if necessary
+  command: touch /etc/sysctl.conf
+  when: sys_con.stat.exists == False
+  
+- name: enable temporary IPv4 forwarding if necessary
+  command: sysctl net.inet.ip.forwarding=1
+  when: sys_con.stat.exists == False
+  
+- name: put IPv4 forwarding enable in sysctl.conf if necessary
+  lineinfile:
+    dest: /etc/sysctl.conf
+    line: "net.inet.ip.forwarding=1"
+  when: sys_con.stat.exists == False
+  
+- name: make sure IPv4 forwarding is enabled in sysctl.conf
+  lineinfile:
+    dest: /etc/sysctl.conf
+    regexp: "net.inet.ip.forwarding="
+    line: "net.inet.ip.forwarding=1"
