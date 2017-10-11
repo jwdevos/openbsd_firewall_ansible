@@ -17,24 +17,14 @@ ext_subnets = "{ {% for int in interfaces %}
 # define a table with forbidden external subnets
 table <forbidden> { {% for net in forbidden_nets %}{{ net }}, {% endfor %} }
 
-
-
-
-
-
-
-
 # don't send RST for dropped packets
 set block-policy drop
 
-# set interfaces that will have packet and byte statistics collected
-set loginterface egress
-
-#omit lo0 interface from packet processing in PF
+#omit lo0 interface from being processed in pf
 set skip on lo0
 
 # scrub all incoming packets, clearing dnf bit, randomizing packet id
-# and setting max mtu to 1440
+# and setting max mss to 1440
 match in all scrub (no-df random-id max-mss 1440)
 
 # enable NAT from every other network than egress to egress
@@ -49,21 +39,11 @@ block in quick on egress from <martians> to any
 # default deny rule
 block all
 
-# Allow incoming icmp6
-pass in quick on em0 inet6 proto ipv6-icmp icmp6-type $icmp6_types
-
-# Allow incoming icmp6 NDP
-pass in quick on em0 inet6 proto ipv6-icmp icmp6-type $icmp6_ndp_types
-
-# Allow incoming DHCPv6
-pass in quick on em0 inet6 proto udp to port 546
-
 #allow incoming ping
 pass in quick on em0 inet proto icmp icmp-type echoreq
 
 # allow outgoing traffic on any interface
 pass out quick inet
-pass out quick inet6
 
 # allow all traffic from internal interfaces to pass
 pass in on $int_if inet
@@ -71,12 +51,5 @@ pass in on $int_if inet6
 pass in on em4 inet
 pass in on em4 inet6
 
-#allow all traffic from internal interfaces to dmz
-pass out on $int_if from $int_subnets to $dmz_subnet
-
 # allow ssh to outside interface from any ip
 pass in on egress inet proto tcp from any to (egress) port 22
-
-# port forward example
-#pass in on egress inet proto tcp from any to (egress) port { 80 443 } rdr-to 192.168.1.2
-
