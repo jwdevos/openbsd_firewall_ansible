@@ -25,7 +25,7 @@ The setup playbook actually calls an ansible role taking care of lots of things.
 7. Configure IP forwarding
 8. Configure the pf firewall, testing the configuration file and reloading the firewall if relevant configuration was changed
 
-Most of the it
+Most of the items in the list above rely on the Jinja2 templates in the templates-directory. These templates make use of the content of the host_vars.
 
 **Some notes**  
 * Additional firewall rules have to be added in the template file at this moment. The intention is to look into generating the rules, taking the content from host_vars
