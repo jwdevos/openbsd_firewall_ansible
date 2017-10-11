@@ -1,0 +1,5 @@
+---
+- name: create pf.conf
+  template:
+    src: pf.conf.j2
+    dest: /etc/pf.conf
