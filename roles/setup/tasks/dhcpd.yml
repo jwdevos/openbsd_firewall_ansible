@@ -3,3 +3,9 @@
   template:
     src: dhcpd.conf.j2
     dest: /etc/dhcpd.conf
+
+- name: start dhcpd if needed
+  service:
+    name: dhcpd
+    state: started
+    enabled: yes
