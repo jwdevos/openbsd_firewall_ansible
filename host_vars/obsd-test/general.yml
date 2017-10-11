@@ -1,6 +1,7 @@
 ---
 # general vars
 hostname: obsd-test
+virtual: yes
 tz: /usr/share/zoneinfo/Europe/Amsterdam
 domain: lan
 dns1: 208.67.222.222
