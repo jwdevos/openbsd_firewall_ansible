@@ -1,7 +1,5 @@
 # openbsd_firewall_ansible  
-Build a basic OpenBSD firewall with Ansible
-
-fully bla config via vars geen state in playbooks en templates
+This Ansible project is used to deploy and manage an OpenBSD firewall running pf and dhcpd. The playbooks deploy a running firewall taking nothing more than a fresh install of OpenBSD. The project produces a minimum viable product to demonstrate a working firewall. It is intended for demonstration purposes but can be taken freely to suit your own needs. The cool thing is that all of the unique configuration is in the files under host_vars. That means you can easily make configuration changes to a running box and reload only the services that were affected. For pf, the firewall keeps running if you just reload the configuration.
 
 **How to use**  
 Start with a fresh install of OpenBSD reachable via SSH as root on an IPv4 address. Have this Ansible project ready on another host that can reach the OpenBSD box.
