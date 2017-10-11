@@ -11,3 +11,4 @@ Build a basic OpenBSD firewall with Ansible
 **project explanation**
 * pf template breaks with multiple interfaces as external
 * tested on OpenBSD 6.2
+* ssh allow rule niet in productie nemen
