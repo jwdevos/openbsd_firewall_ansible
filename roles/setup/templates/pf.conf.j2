@@ -47,9 +47,7 @@ pass out quick inet
 
 # allow all traffic from internal interfaces to pass
 pass in on $int_if inet
-pass in on $int_if inet6
 pass in on em4 inet
-pass in on em4 inet6
 
 # allow ssh to outside interface from any ip
 pass in on egress inet proto tcp from any to (egress) port 22
