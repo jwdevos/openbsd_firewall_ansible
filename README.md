@@ -3,7 +3,6 @@ Build a basic OpenBSD firewall with Ansible
 
 **to do**
 * enable ipv4 forwarding: echo 'net.inet.ip.forwarding=1' >> /etc/sysctl.conf 
-* pf config
 * test pf config
 * (re)start services if shit is good _and_ changed
 * test
