@@ -10,7 +10,7 @@ internal_nets = "{ {% for int in interfaces if interfaces.get(int).fw == "intern
 {% if not loop.last %}{{ int }}:network, {% endif %}
 {% if loop.last %}{{ int }}:network {% endif %}
 {% endfor %}
-"}
+}"
 external_int = "{% for int in interfaces %}
 {% if interfaces.get(int).fw == "external" %}{{ int }}{% endif %}
 {% endfor %}"
