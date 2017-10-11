@@ -2,8 +2,6 @@
 Build a basic OpenBSD firewall with Ansible
 
 **to do**
-* test dhcpd config
-* 
 * test firewall
 * reboot
 * test firewall again
