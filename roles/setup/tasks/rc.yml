@@ -21,8 +21,8 @@
   set_fact: 
     dhcpd_flags_input: "{{ lookup('template', 'dhcpd.flags.j2') }}"
 
-#- name: configure rc.conf.local dhcpd flags
-#  lineinfile: 
-#    dest: /etc/rc.conf.local
-#    regexp: "^dhcpd_flags="
-#    line: "{{ dhcpd_flags_input }}"
+- name: configure rc.conf.local dhcpd flags
+  lineinfile: 
+    dest: /etc/rc.conf.local
+    regexp: "^dhcpd_flags="
+    line: "{{ dhcpd_flags_input }}"
