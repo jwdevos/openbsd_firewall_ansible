@@ -19,7 +19,7 @@
   
 - name: kick ntpd if this is first playbook run
   command: ntpd -s
-  when: first_run.stat.exists == True
+  when: first_run.stat.exists == False
   
 - name: kick ntpd if tz was changed
   command: ntpd -s
