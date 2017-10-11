@@ -6,8 +6,9 @@
 
 - name: create rc.conf.local if necessary
   copy: 
-   src: /etc/rc.conf 
-   dest: /etc/rc.conf.local
+    remote_src: yes
+    src: /etc/rc.conf 
+    dest: /etc/rc.conf.local
   when: rc_conf_local.stat.exists == False
 
 - name: configure rc.conf.local vmd flag
