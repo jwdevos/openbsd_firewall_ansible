@@ -2,12 +2,7 @@
 
 
 {% for int in interfaces %}
-  {% if not loop.last %}
-    {{ int }}, 
-  {% endif %}
-  {% if loop.last %}
-    {{ int }} 
-  {% endif %}
+{{ int }}, 
 {% endfor %}
 
 
