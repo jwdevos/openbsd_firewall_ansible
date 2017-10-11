@@ -11,7 +11,7 @@
     dest: /etc/rc.conf.local
   when: rc_conf_local.stat.exists == False
 
-- name: configure rc.conf.local vmd flag
+- name: configure rc.conf.local vmd flag if necessary
   lineinfile:
     dest: /etc/rc.conf.local
     regexp: "^vmd_flags="
