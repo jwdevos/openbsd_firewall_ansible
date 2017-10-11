@@ -14,17 +14,19 @@ ext_subnets = "{ {% for int in interfaces %}
 {% if interfaces.get(int).fw == "external" %}{{ int }}:network, {% endif %}
 {% endfor %} }"
 
+# define a table with forbidden external subnets
+table <forbidden> {
+{% for net in forbidden_nets %}
+{{ net }},
+{% endfor %}
+}
 
 
 
 
 
-# define a table with addresses that should not be routed
-# including RFC 1918
-table <martians> { 0.0.0.0/8,        10.0.0.0/8,      127.0.0.0/8,     \
-                   169.254.0.0/16,   172.16.0.0/12,   192.0.0.0/24,    \
-                   192.0.2.0/24,     224.0.0.0/3,     192.168.0.0/16,  \
-                   198.18.0.0/15,    198.51.100.0/24, 203.0.113.0/24 }
+
+
 
 # don't send RST for dropped packets
 set block-policy drop
