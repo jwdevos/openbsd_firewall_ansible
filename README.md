@@ -13,3 +13,4 @@ Build a basic OpenBSD firewall with Ansible
 * check for state in playbooks, should only be allowed in vars
 
 **project explanation**
+* breaks with multiple interfaces as external
