@@ -19,21 +19,6 @@ ext_subnets = "{ {% for int in interfaces %}
 
 
 
-
-
-
-# define a macro for internal interfaces
-int_if = "{ em1, em2, em3 }"
-int_subnets = "{ em1:network, em2:network, em3:network }"
-dmz_if = "{ em4 }"
-dmz_subnet = "{ 217.63.74.128/28 }"
-
-# define basic IPv6 ICMP types (packet too big, echo request)
-icmp6_types = "{ 2, 128 }"
-
-# define IPv6 NDP ICMP types (RS, RA, NS, NA, redir)
-icmp6_ndp_types = "{ 133, 134, 135, 136, 137 }"
-
 # define a table with addresses that should not be routed
 # including RFC 1918
 table <martians> { 0.0.0.0/8,        10.0.0.0/8,      127.0.0.0/8,     \
